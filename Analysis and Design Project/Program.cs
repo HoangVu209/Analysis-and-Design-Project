@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Analysis_and_Design_Project.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Analysis_and_Design_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Login());
         }
     }
 }

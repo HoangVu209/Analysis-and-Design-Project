@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace Analysis_and_Design_Project
 {
     partial class Form1
@@ -29,6 +31,7 @@ namespace Analysis_and_Design_Project
         /// </summary>
         private void InitializeComponent()
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();

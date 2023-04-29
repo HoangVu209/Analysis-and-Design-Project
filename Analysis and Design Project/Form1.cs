@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Analysis_and_Design_Project.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,12 @@ namespace Analysis_and_Design_Project
     {
         public Form1()
         {
-            
+
             InitializeComponent();
+            this.Close();
+            Login login = new Login();
+            login.Show();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
