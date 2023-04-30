@@ -69,7 +69,7 @@ namespace Analysis_and_Design_Project
             this.label1.Size = new System.Drawing.Size(178, 24);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome to the";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // pictureBox1
             // 
@@ -80,7 +80,7 @@ namespace Analysis_and_Design_Project
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            
             // 
             // Form1
             // 

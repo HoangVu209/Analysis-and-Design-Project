@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DTO;
 using BLL;
 
+
 namespace Analysis_and_Design_Project.Forms
 {
     public partial class Login : Form
@@ -83,7 +84,17 @@ namespace Analysis_and_Design_Project.Forms
                     return;
 
             }
-            MessageBox.Show("Đăng nhập thành công");
+            try
+            {
+                this.Hide();
+                Booking form = new Booking();
+                form.ShowDialog();
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
