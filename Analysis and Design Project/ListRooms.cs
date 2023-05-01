@@ -49,7 +49,19 @@ namespace Analysis_and_Design_Project
                 lblLoaiPhong.Text = value;
             }
         }
-
+        private string _maPhong;
+        public string MaPhong
+        {
+            get
+            {
+                return _maPhong;
+            }
+            set
+            {
+                _maPhong = value;
+                
+            }
+        }
         [Category("Custom Props")]
         private int _soGiuong;
         public int SoGiuong
@@ -84,7 +96,7 @@ namespace Analysis_and_Design_Project
             set { _icon = value; pictureBox1.Image = value; }
         }
 
-        private NumericUpDown _numericUpDown;
+        private NumericUpDown _numericUpDown;   
         public NumericUpDown numericUpDown
         {
             get { return duNum; }

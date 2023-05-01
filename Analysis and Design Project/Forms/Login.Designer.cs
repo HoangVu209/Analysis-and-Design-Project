@@ -117,7 +117,7 @@ namespace Analysis_and_Design_Project.Forms
             this.label10.Size = new System.Drawing.Size(142, 16);
             this.label10.TabIndex = 4;
             this.label10.Text = "submit message email to:";
-            this.label10.Click += new System.EventHandler(this.label8_Click);
+            
             // 
             // label9
             // 
@@ -129,7 +129,7 @@ namespace Analysis_and_Design_Project.Forms
             this.label9.Size = new System.Drawing.Size(281, 16);
             this.label9.TabIndex = 4;
             this.label9.Text = "To obtain access this App or any questions about it";
-            this.label9.Click += new System.EventHandler(this.label8_Click);
+            
             // 
             // label8
             // 
@@ -141,7 +141,7 @@ namespace Analysis_and_Design_Project.Forms
             this.label8.Size = new System.Drawing.Size(54, 16);
             this.label8.TabIndex = 4;
             this.label8.Text = "Support:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            
             // 
             // label7
             // 
@@ -222,7 +222,7 @@ namespace Analysis_and_Design_Project.Forms
             this.textBox1.Size = new System.Drawing.Size(370, 20);
             this.textBox1.TabIndex = 2;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            
             // 
             // pictureBox2
             // 

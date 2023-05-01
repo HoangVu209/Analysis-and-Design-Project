@@ -74,8 +74,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanhSachSPDVAccess.cs" />
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="LoaiPhongAccess.cs" />
+    <Compile Include="PhieuDangKyAccess.cs" />
+    <Compile Include="PhieuDangKyCTAccess.cs" />
+    <Compile Include="PhieuDangKySPDVAccess.cs" />
+    <Compile Include="PhieuDangKySPDVCTAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoanAccess.cs" />
   </ItemGroup>

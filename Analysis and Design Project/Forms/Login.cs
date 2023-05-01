@@ -25,16 +25,7 @@ namespace Analysis_and_Design_Project.Forms
             Application.Exit();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void textBox1_Click(object sender, EventArgs e)
         {
             textBox1.BackColor = Color.White;

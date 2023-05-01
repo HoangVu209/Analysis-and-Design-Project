@@ -37,16 +37,15 @@ namespace Analysis_and_Design_Project.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpickerCI = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpickerCO = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.btnGroup = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -63,20 +62,24 @@ namespace Analysis_and_Design_Project.Forms
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtYCDB = new System.Windows.Forms.TextBox();
             this.dtgChoosen = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblMoney = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnTour = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chkBaggage = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,6 +89,7 @@ namespace Analysis_and_Design_Project.Forms
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChoosen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,17 +150,6 @@ namespace Analysis_and_Design_Project.Forms
             this.panel2.Size = new System.Drawing.Size(251, 89);
             this.panel2.TabIndex = 2;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Analysis_and_Design_Project.Properties.Resources.review;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
@@ -215,11 +208,12 @@ namespace Analysis_and_Design_Project.Forms
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.dateTimePicker2);
+            this.panel6.Controls.Add(this.dtpickerCI);
             this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.dateTimePicker1);
+            this.panel6.Controls.Add(this.dtpickerCO);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Controls.Add(this.btnGroup);
+            this.panel6.Controls.Add(this.chkBaggage);
             this.panel6.Controls.Add(this.checkBox1);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.label7);
@@ -235,14 +229,14 @@ namespace Analysis_and_Design_Project.Forms
             this.panel6.Size = new System.Drawing.Size(441, 559);
             this.panel6.TabIndex = 4;
             // 
-            // dateTimePicker2
+            // dtpickerCI
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(131, 262);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(273, 27);
-            this.dateTimePicker2.TabIndex = 10;
+            this.dtpickerCI.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpickerCI.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpickerCI.Location = new System.Drawing.Point(131, 262);
+            this.dtpickerCI.Name = "dtpickerCI";
+            this.dtpickerCI.Size = new System.Drawing.Size(273, 27);
+            this.dtpickerCI.TabIndex = 10;
             // 
             // label10
             // 
@@ -255,14 +249,14 @@ namespace Analysis_and_Design_Project.Forms
             this.label10.TabIndex = 11;
             this.label10.Text = "Check Out: ";
             // 
-            // dateTimePicker1
+            // dtpickerCO
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 329);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(273, 27);
-            this.dateTimePicker1.TabIndex = 8;
+            this.dtpickerCO.CalendarFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpickerCO.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpickerCO.Location = new System.Drawing.Point(131, 329);
+            this.dtpickerCO.Name = "dtpickerCO";
+            this.dtpickerCO.Size = new System.Drawing.Size(273, 27);
+            this.dtpickerCO.TabIndex = 8;
             // 
             // label9
             // 
@@ -406,10 +400,13 @@ namespace Analysis_and_Design_Project.Forms
             this.panel10.Controls.Add(this.dtgChoosen);
             this.panel10.Controls.Add(this.label11);
             this.panel10.Controls.Add(this.label14);
+            this.panel10.Controls.Add(this.lblMoney);
             this.panel10.Controls.Add(this.btnConfirm);
             this.panel10.Controls.Add(this.btnTour);
             this.panel10.Controls.Add(this.btnProduct);
             this.panel10.Controls.Add(this.label13);
+            this.panel10.Controls.Add(this.label16);
+            this.panel10.Controls.Add(this.label15);
             this.panel10.Controls.Add(this.label12);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,8 +421,9 @@ namespace Analysis_and_Design_Project.Forms
             // 
             this.txtYCDB.Location = new System.Drawing.Point(140, 271);
             this.txtYCDB.MaximumSize = new System.Drawing.Size(538, 100);
+            this.txtYCDB.Multiline = true;
             this.txtYCDB.Name = "txtYCDB";
-            this.txtYCDB.Size = new System.Drawing.Size(496, 27);
+            this.txtYCDB.Size = new System.Drawing.Size(496, 79);
             this.txtYCDB.TabIndex = 2;
             // 
             // dtgChoosen
@@ -470,90 +468,6 @@ namespace Analysis_and_Design_Project.Forms
             this.dtgChoosen.TabIndex = 1;
             this.dtgChoosen.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dtgChoosen_RowPostPaint);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(291, 4);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 22);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "CHOOSEN";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(502, 222);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(19, 21);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "0";
-            // 
-            // btnConfirm
-            // 
-            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
-            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirm.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnConfirm.Location = new System.Drawing.Point(308, 433);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(138, 35);
-            this.btnConfirm.TabIndex = 7;
-            this.btnConfirm.Text = "Confirm";
-            this.btnConfirm.UseVisualStyleBackColor = false;
-            // 
-            // btnTour
-            // 
-            this.btnTour.BackColor = System.Drawing.SystemColors.Control;
-            this.btnTour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTour.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnTour.Location = new System.Drawing.Point(552, 315);
-            this.btnTour.Name = "btnTour";
-            this.btnTour.Size = new System.Drawing.Size(84, 35);
-            this.btnTour.TabIndex = 7;
-            this.btnTour.Text = "Tour";
-            this.btnTour.UseVisualStyleBackColor = false;
-            // 
-            // btnProduct
-            // 
-            this.btnProduct.BackColor = System.Drawing.SystemColors.Control;
-            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.btnProduct.Location = new System.Drawing.Point(552, 374);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(84, 35);
-            this.btnProduct.TabIndex = 7;
-            this.btnProduct.Text = "Product ";
-            this.btnProduct.UseVisualStyleBackColor = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(439, 222);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 21);
-            this.label13.TabIndex = 9;
-            this.label13.Text = "Total: ";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(5, 274);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 21);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Requirement: ";
-            // 
             // Column4
             // 
             this.Column4.HeaderText = "ID";
@@ -577,6 +491,148 @@ namespace Analysis_and_Design_Project.Forms
             this.Column3.HeaderText = "Price";
             this.Column3.Name = "Column3";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(304, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(105, 22);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "CHOOSEN";
+            // 
+            // lblMoney
+            // 
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoney.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblMoney.Location = new System.Drawing.Point(480, 222);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(19, 21);
+            this.lblMoney.TabIndex = 9;
+            this.lblMoney.Text = "0";
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.SystemColors.Control;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirm.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnConfirm.Location = new System.Drawing.Point(308, 501);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(138, 35);
+            this.btnConfirm.TabIndex = 7;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnTour
+            // 
+            this.btnTour.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTour.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTour.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnTour.Location = new System.Drawing.Point(552, 361);
+            this.btnTour.Name = "btnTour";
+            this.btnTour.Size = new System.Drawing.Size(84, 35);
+            this.btnTour.TabIndex = 7;
+            this.btnTour.Text = "Tour";
+            this.btnTour.UseVisualStyleBackColor = false;
+            // 
+            // btnProduct
+            // 
+            this.btnProduct.BackColor = System.Drawing.SystemColors.Control;
+            this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnProduct.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnProduct.Location = new System.Drawing.Point(552, 421);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(84, 35);
+            this.btnProduct.TabIndex = 7;
+            this.btnProduct.Text = "Product ";
+            this.btnProduct.UseVisualStyleBackColor = false;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.Control;
+            this.label13.Location = new System.Drawing.Point(417, 222);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(57, 21);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "Total: ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
+            this.label12.Location = new System.Drawing.Point(5, 274);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(119, 21);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Requirement: ";
+            // 
+            // chkBaggage
+            // 
+            this.chkBaggage.AutoSize = true;
+            this.chkBaggage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBaggage.ForeColor = System.Drawing.SystemColors.Control;
+            this.chkBaggage.Location = new System.Drawing.Point(238, 396);
+            this.chkBaggage.Name = "chkBaggage";
+            this.chkBaggage.Size = new System.Drawing.Size(176, 25);
+            this.chkBaggage.TabIndex = 6;
+            this.chkBaggage.Text = "Baggage handling";
+            this.chkBaggage.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Location = new System.Drawing.Point(548, 222);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 21);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "USD";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.Control;
+            this.label15.Location = new System.Drawing.Point(457, 369);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(95, 21);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Regis Tour: ";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Control;
+            this.label16.Location = new System.Drawing.Point(348, 428);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(209, 21);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Regis Product or Services: ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Analysis_and_Design_Project.Properties.Resources.review;
+            this.pictureBox1.Location = new System.Drawing.Point(47, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(154, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Booking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -597,7 +653,6 @@ namespace Analysis_and_Design_Project.Forms
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -613,6 +668,7 @@ namespace Analysis_and_Design_Project.Forms
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChoosen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -642,16 +698,16 @@ namespace Analysis_and_Design_Project.Forms
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnGroup;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpickerCI;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpickerCO;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dtgChoosen;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtYCDB;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnConfirm;
@@ -661,5 +717,9 @@ namespace Analysis_and_Design_Project.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.CheckBox chkBaggage;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
     }
 }
