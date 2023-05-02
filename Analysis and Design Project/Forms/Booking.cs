@@ -20,6 +20,7 @@ namespace Analysis_and_Design_Project.Forms
         private DataTable LoaiPhong;
         public PhieuDKSPDV PhieuDKSPDV;
         public List<PhieuDKSPDVCT> DKSPDVCTs;
+        public PhieuDangKyTour phieuDangKyTour;
         public Booking()
         {
             InitializeComponent();
@@ -146,9 +147,6 @@ namespace Analysis_and_Design_Project.Forms
                 lblMoney.Text = (Convert.ToDouble(lblMoney.Text) + Convert.ToDouble(choosenRoom.GiaTien)).ToString();
                 dtgChoosen.Rows.Add(null, choosenRoom.LoaiPhong, choosenRoom.SoGiuong, choosenRoom.GiaTien);
             }
-
-            
-
         }
 
         private void dtgChoosen_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -198,7 +196,7 @@ namespace Analysis_and_Design_Project.Forms
 
             //MessageBox.Show(DSPhieuCT.Count.ToString());
             this.Hide();
-            Payment formPay = new Payment(phieuDangKy, DSPhieuCT, PhieuDKSPDV, DKSPDVCTs);
+            Payment formPay = new Payment(phieuDangKy, DSPhieuCT, PhieuDKSPDV, DKSPDVCTs, phieuDangKyTour);
             formPay.ShowDialog();
             this.Close();
         }
@@ -207,6 +205,13 @@ namespace Analysis_and_Design_Project.Forms
         {
             this.Hide();
             ProductAndServices form = new ProductAndServices(this);
+            form.ShowDialog();
+        }
+
+        private void btnTour_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Tour form = new Tour(this);
             form.ShowDialog();
         }
     }

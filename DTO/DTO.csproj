@@ -81,10 +81,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DanhSachSPDV.cs" />
+    <Compile Include="DanhSachTour.cs" />
+    <Compile Include="DSTGTour.cs" />
     <Compile Include="HoSoThanhToan.cs" />
     <Compile Include="LoaiPhong.cs" />
     <Compile Include="PhieuDangKy.cs" />
     <Compile Include="PhieuDangKyCT.cs" />
+    <Compile Include="PhieuDangKyTour.cs" />
+    <Compile Include="PhieuDangKyTourCT.cs" />
     <Compile Include="PhieuDKSPDV.cs" />
     <Compile Include="PhieuDKSPDVCT.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

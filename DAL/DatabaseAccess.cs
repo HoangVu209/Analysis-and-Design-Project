@@ -74,9 +74,10 @@ namespace DAL
         {
             OracleTransaction transaction = null;
             string newMaPhieuDK = string.Empty;
+            _conn.Open();
             try
             {
-                _conn.Open();
+               // _conn.Open();
                 transaction = _conn.BeginTransaction();
                 // Tạo command để gọi procedure tạo mã phiếu đăng ký mới
                 OracleCommand cmdCreateNewMaPhieuDK = new OracleCommand("SYS.CreateNewMaPhieuDK", _conn);
@@ -236,7 +237,7 @@ namespace DAL
 
         }
         // PHIẾU ĐĂNG KÝ SẢN PHẨM DỊCH VỤ CHI TIẾT
-        public int AddDataToPHIEUCHITIETSP_DVDTO(PhieuDKSPDVCT phieu)
+        public static int AddDataToPHIEUCHITIETSP_DVDTO(PhieuDKSPDVCT phieu)
         {
             try
             {
@@ -266,6 +267,104 @@ namespace DAL
             }
         }
 
+        // Danh sách tour
+        public static DataTable GetDanhSachTourFromOracleDTO()
+        {
+            // Create a connection to the Oracle dat
+            // Open the connection.
+            _conn.Open();
+            // Iterate through the data reader.
+            try
+            {
+                string query = "SELECT MATOUR, TEN, GIATIEN, MACONGTY, MOTA FROM C##SCHEMA_USER.DANHSACHTOUR";
+                OracleDataAdapter sda = new OracleDataAdapter(query, _conn);
+                DataTable dtable = new DataTable();
+                sda.Fill(dtable);
+                return dtable;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        // Phiếu đăng ký tour, Phiếu đăng ký tour chi tiết, danh sách tham gia tour
+        public static int ThemDangKyTourDTO(PhieuDangKyTour phieu)
+        {
+            
+            _conn.Open();
+            using (OracleTransaction transaction = _conn.BeginTransaction())
+            {
+                try
+                {
+                    // Tạo mã phiếu tour
+                    string maPhieuTour = "";
+                    using (OracleCommand command = new OracleCommand("SYS.GENERATE_PHIEUTOUR_ID", _conn))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("OUT_ID", OracleDbType.Varchar2, 4).Direction = ParameterDirection.Output;
+                        command.ExecuteNonQuery();
+                        maPhieuTour = command.Parameters["OUT_ID"].Value.ToString();
+                    }
+
+                    // Thêm dữ liệu vào bảng DANGKYTOUR
+                    using (OracleCommand command = new OracleCommand("INSERT INTO C##SCHEMA_USER.DANGKYTOUR (MAPHIEUTOUR, TONGNGUOI, TOSOLUONGTOUR, TONGTIEN, TUTUC, MAPHIEUDK) " +
+                                                           "VALUES (:MAPHIEUTOUR, :TONGNGUOI, :TOSOLUONGTOUR, :TONGTIEN, :TUTUC, :MAPHIEUDK)", _conn))
+                    {
+                        command.Parameters.Add(":MAPHIEUTOUR", OracleDbType.Varchar2, 4).Value = maPhieuTour;
+                        command.Parameters.Add(":TONGNGUOI", OracleDbType.Int32).Value = phieu.TONGNGUOI;
+                        command.Parameters.Add(":TOSOLUONGTOUR", OracleDbType.Int32).Value = phieu.TOSOLUONGTOUR;
+                        command.Parameters.Add(":TONGTIEN", OracleDbType.Decimal).Value = Convert.ToDecimal(phieu.TONGTIEN);
+                        command.Parameters.Add(":TUTUC", OracleDbType.Int32).Value = phieu.TUTUC;
+                        command.Parameters.Add(":MAPHIEUDK", OracleDbType.Varchar2, 4).Value = phieu.MAPHIEUDK;
+                        command.ExecuteNonQuery();
+                    }
+
+                    // Thêm dữ liệu vào bảng DANHSACHTHAMGIATOUR
+                    for (int i = 0; i < phieu.DANHSACHTG.Count; i++)
+                    {
+                        using (OracleCommand command = new OracleCommand("INSERT INTO C##SCHEMA_USER.DANHSACHTHAMGIATOUR (MATOUR, STT, HOTEN, CMND) VALUES (:MATOUR, :STT, :HOTEN, :CMND)", _conn))
+                        {
+                            command.Parameters.Add(":MATOUR", OracleDbType.Varchar2, 4).Value = maPhieuTour; // Thay bằng mã tour tương ứng
+                            command.Parameters.Add(":STT", OracleDbType.Int32).Value = phieu.DANHSACHTG[i].STT; // Thay bằng số thứ tự tương ứng
+                            command.Parameters.Add(":HOTEN", OracleDbType.NVarchar2, 50).Value = phieu.DANHSACHTG[i].HOTEN; // Thay bằng họ tên tương ứng
+                            command.Parameters.Add(":CMND", OracleDbType.Varchar2, 11).Value = phieu.DANHSACHTG[i].CMND; // Thay bằng số CMND tương ứng
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    // Thêm dữ liệu vào bảng DANGKYTOURCHITIET
+                    for (int i = 0; i < phieu.PHIEUCT.Count; i++)
+                    {
+                        using (OracleCommand command = new OracleCommand("INSERT INTO C##SCHEMA_USER.DANGKYTOURCHITIET (MAPHIEUTOUR, MATOUR) VALUES (:MAPHIEUTOUR, :MATOUR)", _conn))
+                        {
+                            command.Parameters.Add(":MAPHIEUTOUR", OracleDbType.Varchar2, 4).Value = maPhieuTour;
+                            command.Parameters.Add(":MATOUR", OracleDbType.Varchar2, 4).Value = phieu.PHIEUCT[i].MATOUR; // Thay bằng mã tour tương ứng
+                            command.ExecuteNonQuery();
+                        }
+                    }
+
+                    transaction.Commit();
+                    Console.WriteLine("Thêm dữ liệu thành công");
+                    return 1;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    Console.WriteLine("Lỗi: " + ex.Message);
+                    return -1;
+                }
+                finally
+                {
+                    _conn.Close();
+                }
+            }
+        }
 
     }
 }

@@ -18,8 +18,9 @@ namespace Analysis_and_Design_Project.Forms
         HoSoThanhToan _hoSo;
         PhieuDKSPDV _phieuDKSPDV;
         List<PhieuDKSPDVCT> _phieuDKSPDVCTs;
+        PhieuDangKyTour _phieuDangKyTour;
         public Invoice(PhieuDangKy phieuDangKy, List<PhieuDangKyCT> DSPhieuCT, 
-            HoSoThanhToan hoSo, PhieuDKSPDV phieuDKSPDV, List<PhieuDKSPDVCT> phieuDKSPDVCTs) 
+            HoSoThanhToan hoSo, PhieuDKSPDV phieuDKSPDV, List<PhieuDKSPDVCT> phieuDKSPDVCTs, PhieuDangKyTour phieuDangKyTour) 
         {
 
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace Analysis_and_Design_Project.Forms
             _hoSo = hoSo;
             _phieuDKSPDV = phieuDKSPDV;
             _phieuDKSPDVCTs = phieuDKSPDVCTs;
+            _phieuDangKyTour = phieuDangKyTour;
             LoadInv();
         }
         private void LoadInv()
@@ -46,6 +48,13 @@ namespace Analysis_and_Design_Project.Forms
                 }
                 lblTTSPDV.Text = _phieuDKSPDV.TONGTIEN.ToString();
             }
+            if(_phieuDangKyTour != null)
+            {
+                for(int i = 0; i < _phieuDangKyTour.PHIEUCT.Count; i++)
+                {
+                    dataGridView3.Rows.Add(null, _phieuDangKyTour.PHIEUCT[i].MATOUR, _phieuDangKyTour.PHIEUCT[i].COMPANY, _phieuDangKyTour.THOIGIANDK, _phieuDangKyTour.PHIEUCT[i].PRICE);
+                }    
+            }    
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -94,10 +103,16 @@ namespace Analysis_and_Design_Project.Forms
                 }
                 count++;
             } while (count < _DSPhieuCT.Count);
-
-
+            _phieuDangKyTour.MAPHIEUDK = maPhieuDK;
+            PhieuDangKyTourBLL phieuDangKyTourBLL = new PhieuDangKyTourBLL();
+            phieuDangKyTourBLL.ThemDangKyTour(_phieuDangKyTour);
 
             MessageBox.Show("Thêm thành công");
+        }
+
+        private void dataGridView3_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            dataGridView3.Rows[e.RowIndex].Cells[0].Value = (e.RowIndex + 1).ToString();
         }
     }
 }

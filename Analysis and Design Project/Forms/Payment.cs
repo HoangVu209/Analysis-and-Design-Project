@@ -17,14 +17,16 @@ namespace Analysis_and_Design_Project.Forms
         List<PhieuDangKyCT> _DSPhieuCT;
         PhieuDKSPDV _phieuDKSPDV;
         List<PhieuDKSPDVCT> _phieuDKSPDVCTs;
+        PhieuDangKyTour _phieuDangKyTour;
         public Payment(PhieuDangKy phieuDangKy, List<PhieuDangKyCT> DSPhieuCT
-            , PhieuDKSPDV phieuDKSPDV, List<PhieuDKSPDVCT> phieuDKSPDVCTs)
+            , PhieuDKSPDV phieuDKSPDV, List<PhieuDKSPDVCT> phieuDKSPDVCTs, PhieuDangKyTour phieuDangKyTour)
         {
             InitializeComponent();
             _phieuDangKy = phieuDangKy;            
             _DSPhieuCT = DSPhieuCT;
             _phieuDKSPDV = phieuDKSPDV;
             _phieuDKSPDVCTs = phieuDKSPDVCTs;
+            _phieuDangKyTour = phieuDangKyTour;
         }
 
         private void Payment_Load(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace Analysis_and_Design_Project.Forms
                 return;
             }
             this.Hide();
-            Invoice formInv = new Invoice(_phieuDangKy, _DSPhieuCT, hoSo, _phieuDKSPDV, _phieuDKSPDVCTs);
+            Invoice formInv = new Invoice(_phieuDangKy, _DSPhieuCT, hoSo, _phieuDKSPDV, _phieuDKSPDVCTs, _phieuDangKyTour);
             formInv.ShowDialog();
             this.Close();
         }

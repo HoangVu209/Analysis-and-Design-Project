@@ -37,6 +37,7 @@ namespace Analysis_and_Design_Project.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@ namespace Analysis_and_Design_Project.Forms
             this.dtpickerCO = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.btnGroup = new System.Windows.Forms.Button();
+            this.chkBaggage = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -67,19 +69,18 @@ namespace Analysis_and_Design_Project.Forms
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.lblMoney = new System.Windows.Forms.Label();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnTour = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.chkBaggage = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,7 +90,6 @@ namespace Analysis_and_Design_Project.Forms
             this.panel7.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChoosen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -149,6 +149,17 @@ namespace Analysis_and_Design_Project.Forms
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(251, 89);
             this.panel2.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Analysis_and_Design_Project.Properties.Resources.review;
+            this.pictureBox1.Location = new System.Drawing.Point(47, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(154, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // flowLayoutPanel1
             // 
@@ -281,6 +292,18 @@ namespace Analysis_and_Design_Project.Forms
             this.btnGroup.TabIndex = 7;
             this.btnGroup.Text = "Group Information";
             this.btnGroup.UseVisualStyleBackColor = false;
+            // 
+            // chkBaggage
+            // 
+            this.chkBaggage.AutoSize = true;
+            this.chkBaggage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBaggage.ForeColor = System.Drawing.SystemColors.Control;
+            this.chkBaggage.Location = new System.Drawing.Point(238, 396);
+            this.chkBaggage.Name = "chkBaggage";
+            this.chkBaggage.Size = new System.Drawing.Size(176, 25);
+            this.chkBaggage.TabIndex = 6;
+            this.chkBaggage.Text = "Baggage handling";
+            this.chkBaggage.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
@@ -503,6 +526,17 @@ namespace Analysis_and_Design_Project.Forms
             this.label11.TabIndex = 0;
             this.label11.Text = "CHOOSEN";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Location = new System.Drawing.Point(548, 222);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 21);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "USD";
+            // 
             // lblMoney
             // 
             this.lblMoney.AutoSize = true;
@@ -540,6 +574,7 @@ namespace Analysis_and_Design_Project.Forms
             this.btnTour.TabIndex = 7;
             this.btnTour.Text = "Tour";
             this.btnTour.UseVisualStyleBackColor = false;
+            this.btnTour.Click += new System.EventHandler(this.btnTour_Click);
             // 
             // btnProduct
             // 
@@ -566,39 +601,16 @@ namespace Analysis_and_Design_Project.Forms
             this.label13.TabIndex = 9;
             this.label13.Text = "Total: ";
             // 
-            // label12
+            // label16
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(5, 274);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 21);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Requirement: ";
-            // 
-            // chkBaggage
-            // 
-            this.chkBaggage.AutoSize = true;
-            this.chkBaggage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBaggage.ForeColor = System.Drawing.SystemColors.Control;
-            this.chkBaggage.Location = new System.Drawing.Point(238, 396);
-            this.chkBaggage.Name = "chkBaggage";
-            this.chkBaggage.Size = new System.Drawing.Size(176, 25);
-            this.chkBaggage.TabIndex = 6;
-            this.chkBaggage.Text = "Baggage handling";
-            this.chkBaggage.UseVisualStyleBackColor = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(548, 222);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 21);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "USD";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.Control;
+            this.label16.Location = new System.Drawing.Point(348, 428);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(209, 21);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Regis Product or Services: ";
             // 
             // label15
             // 
@@ -611,27 +623,16 @@ namespace Analysis_and_Design_Project.Forms
             this.label15.TabIndex = 9;
             this.label15.Text = "Regis Tour: ";
             // 
-            // label16
+            // label12
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.Control;
-            this.label16.Location = new System.Drawing.Point(348, 428);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(209, 21);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "Regis Product or Services: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Analysis_and_Design_Project.Properties.Resources.review;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(154, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.Control;
+            this.label12.Location = new System.Drawing.Point(5, 274);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(119, 21);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Requirement: ";
             // 
             // Booking
             // 
@@ -653,6 +654,7 @@ namespace Analysis_and_Design_Project.Forms
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -668,7 +670,6 @@ namespace Analysis_and_Design_Project.Forms
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgChoosen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

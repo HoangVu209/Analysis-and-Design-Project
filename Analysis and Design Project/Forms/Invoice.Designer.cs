@@ -38,12 +38,10 @@ namespace Analysis_and_Design_Project.Forms
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dtgSPDV = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgRegisForm = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,13 +52,18 @@ namespace Analysis_and_Design_Project.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.lblTTSPDV = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblTotalTour = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -121,11 +124,14 @@ namespace Analysis_and_Design_Project.Forms
             this.panel3.Controls.Add(this.dataGridView3);
             this.panel3.Controls.Add(this.dtgRegisForm);
             this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.lblRegisTotal);
             this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.lblTTSPDV);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.lblTotalTour);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label2);
@@ -177,6 +183,24 @@ namespace Analysis_and_Design_Project.Forms
             this.dtgSPDV.Size = new System.Drawing.Size(344, 150);
             this.dtgSPDV.TabIndex = 1;
             // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MASPDV";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CODE";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SOLUONG";
+            this.dataGridViewTextBoxColumn3.HeaderText = "QUANTITY";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "GIATIEN";
+            this.dataGridViewTextBoxColumn4.HeaderText = "PRICE";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
             // dataGridView3
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -184,38 +208,14 @@ namespace Analysis_and_Design_Project.Forms
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn7,
-            this.Column5});
+            this.Column5,
+            this.dataGridViewTextBoxColumn8});
             this.dataGridView3.Location = new System.Drawing.Point(295, 270);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(543, 150);
             this.dataGridView3.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "ORDER";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "NAME";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "PRICE";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "COMPANY";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "DATE ";
-            this.Column5.Name = "Column5";
+            this.dataGridView3.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridView3_RowPostPaint);
             // 
             // dtgRegisForm
             // 
@@ -271,7 +271,7 @@ namespace Analysis_and_Design_Project.Forms
             this.lblRegisTotal.AutoSize = true;
             this.lblRegisTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
-            this.lblRegisTotal.Location = new System.Drawing.Point(372, 206);
+            this.lblRegisTotal.Location = new System.Drawing.Point(376, 206);
             this.lblRegisTotal.Name = "lblRegisTotal";
             this.lblRegisTotal.Size = new System.Drawing.Size(22, 21);
             this.lblRegisTotal.TabIndex = 0;
@@ -282,7 +282,7 @@ namespace Analysis_and_Design_Project.Forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
-            this.label5.Location = new System.Drawing.Point(291, 206);
+            this.label5.Location = new System.Drawing.Point(313, 206);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(57, 21);
             this.label5.TabIndex = 0;
@@ -293,7 +293,7 @@ namespace Analysis_and_Design_Project.Forms
             this.lblTTSPDV.AutoSize = true;
             this.lblTTSPDV.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTTSPDV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
-            this.lblTTSPDV.Location = new System.Drawing.Point(1017, 206);
+            this.lblTTSPDV.Location = new System.Drawing.Point(970, 206);
             this.lblTTSPDV.Name = "lblTTSPDV";
             this.lblTTSPDV.Size = new System.Drawing.Size(22, 21);
             this.lblTTSPDV.TabIndex = 0;
@@ -304,29 +304,40 @@ namespace Analysis_and_Design_Project.Forms
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
-            this.label6.Location = new System.Drawing.Point(941, 206);
+            this.label6.Location = new System.Drawing.Point(917, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 21);
             this.label6.TabIndex = 0;
             this.label6.Text = "Total:";
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
-            this.label10.Location = new System.Drawing.Point(755, 423);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 21);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "....";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
+            this.label8.Location = new System.Drawing.Point(797, 423);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(41, 21);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "USD";
+            // 
+            // lblTotalTour
+            // 
+            this.lblTotalTour.AutoSize = true;
+            this.lblTotalTour.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalTour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
+            this.lblTotalTour.Location = new System.Drawing.Point(771, 423);
+            this.lblTotalTour.Name = "lblTotalTour";
+            this.lblTotalTour.Size = new System.Drawing.Size(26, 21);
+            this.lblTotalTour.TabIndex = 0;
+            this.lblTotalTour.Text = "....";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
-            this.label7.Location = new System.Drawing.Point(696, 423);
+            this.label7.Location = new System.Drawing.Point(722, 423);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 21);
             this.label7.TabIndex = 0;
@@ -354,23 +365,54 @@ namespace Analysis_and_Design_Project.Forms
             this.label2.TabIndex = 0;
             this.label2.Text = "Detailed Registration Form";
             // 
-            // dataGridViewTextBoxColumn2
+            // label9
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MASPDV";
-            this.dataGridViewTextBoxColumn2.HeaderText = "CODE";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
+            this.label9.Location = new System.Drawing.Point(998, 206);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 21);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "USD";
             // 
-            // dataGridViewTextBoxColumn3
+            // label10
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SOLUONG";
-            this.dataGridViewTextBoxColumn3.HeaderText = "QUANTITY";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(125)))), ((int)(((byte)(113)))));
+            this.label10.Location = new System.Drawing.Point(404, 206);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 21);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "USD";
             // 
-            // dataGridViewTextBoxColumn4
+            // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "GIATIEN";
-            this.dataGridViewTextBoxColumn4.HeaderText = "PRICE";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn5.HeaderText = "ORDER";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "CODE";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "COMPANY";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "THOIGIANDK";
+            this.Column5.HeaderText = "DATE ";
+            this.Column5.Name = "Column5";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "PRICE";
+            this.dataGridViewTextBoxColumn8.HeaderText = "PRICE";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // Invoice
             // 
@@ -413,16 +455,11 @@ namespace Analysis_and_Design_Project.Forms
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label lblRegisTotal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTTSPDV;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblTotalTour;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -432,5 +469,13 @@ namespace Analysis_and_Design_Project.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }
