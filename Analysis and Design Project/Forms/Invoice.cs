@@ -40,7 +40,7 @@ namespace Analysis_and_Design_Project.Forms
             {
                 dtgRegisForm.Rows.Add(_DSPhieuCT[i].STT, _DSPhieuCT[i].LOAIPHONG, _DSPhieuCT[i].SOLUONG, _DSPhieuCT[i].GIATIEN);
             }
-            if (_phieuDKSPDVCTs.Count > 0)
+            if (_phieuDKSPDVCTs != null)
             {
                 for (int i = 0; i < _phieuDKSPDVCTs.Count; i++)
                 {
@@ -62,7 +62,8 @@ namespace Analysis_and_Design_Project.Forms
             PhieuDangKyBLL phieuDangKyBLL = new PhieuDangKyBLL();
             // Thêm và trả về mã phiếu đăng ký
             string maPhieuDK = phieuDangKyBLL.ThemPhieuDangKy(_phieuDangKy);
-            _phieuDKSPDV.MAPHIEUDK = maPhieuDK;
+            if(_phieuDKSPDV != null)
+                _phieuDKSPDV.MAPHIEUDK = maPhieuDK;
             PhieuDKSPDVBLL phieuDKSPDVBLL = new PhieuDKSPDVBLL();
 
             // Phiếu đăng ký sử dụng dịch vụ chi tiết
@@ -70,7 +71,7 @@ namespace Analysis_and_Design_Project.Forms
             if (_phieuDKSPDV != null)
                 maPhieuDKSPDV = phieuDKSPDVBLL.ThemPhieuDKSPDV(_phieuDKSPDV);
             int count1 = 0;
-            if(_phieuDKSPDVCTs.Count > 0)
+            if(_phieuDKSPDVCTs != null)
             {
                 do
                 {
@@ -103,10 +104,12 @@ namespace Analysis_and_Design_Project.Forms
                 }
                 count++;
             } while (count < _DSPhieuCT.Count);
-            _phieuDangKyTour.MAPHIEUDK = maPhieuDK;
-            PhieuDangKyTourBLL phieuDangKyTourBLL = new PhieuDangKyTourBLL();
-            phieuDangKyTourBLL.ThemDangKyTour(_phieuDangKyTour);
-
+            if (_phieuDangKyTour != null)
+            {
+                _phieuDangKyTour.MAPHIEUDK = maPhieuDK;
+                PhieuDangKyTourBLL phieuDangKyTourBLL = new PhieuDangKyTourBLL();
+                phieuDangKyTourBLL.ThemDangKyTour(_phieuDangKyTour);
+            }
             MessageBox.Show("Thêm thành công");
         }
 
